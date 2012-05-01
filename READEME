@@ -1,0 +1,9 @@
+********yschool-mini-jeyakaran***********
+
+If you want to get a copy of this project, type the following command in your desired location to clone
+>>git clone git@github.com:Jeyakaran/yschool-mini-jeyakaran.git
+
+Some of the useful git commands
+git add .
+git commit . -m "comment"
+git push origin
