@@ -39,5 +39,8 @@ public class AddStudentController extends HttpServlet {
 
 		System.out.println("AddStudentController : Get");
 
+		request.getRequestDispatcher("add_student.jsp").forward(request,
+				response);
+
 	}
 }
