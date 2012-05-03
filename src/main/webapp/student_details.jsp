@@ -12,57 +12,51 @@
 }
 -->
 </style>
+<script type="text/javascript" src="student_details.js"></script>
+<jsp:useBean id="studentDetailBean" scope="session"
+	class="org.ymini.model.StudentDetails" />
 </head>
 <body>
-	<form name="form" method="post" action="studentDetails">
-		<jsp:useBean id="studentBean" class="org.ymini.model.Student"
-			scope="session" >
-			
-			</jsp:useBean>
+	<form name="form" method="post" action="studentDetails"
+		onsubmit="return validateForm();">
+
 		<table width="490" border="0">
 			<tr>
-				<td colspan="2"><jsp:getProperty name='studentBean'
-						property='validateMessage' /> <%=studentBean.getName() %></td>
+				<td colspan="2"></td>
 			</tr>
 			<tr>
-				<td width="102">Student Name :</td>
-				<td width="321"><input type="text" name="name" id="name"
-					value="<jsp:getProperty name='studentBean' property='name'/>">
-					<span class="mandatory">*</span>
-				</td>
+				<td width="158">Student Name :</td>
+				<td width="322"><input type="text" name="name" id="name"
+					value=""> <span class="mandatory">*</span></td>
 			</tr>
 			<tr>
 				<td>Address :</td>
-				<td><textarea name="address" id="address" cols="45" rows="5"><jsp:getProperty
-							name='studentBean' property='address' /></textarea></td>
+				<td><textarea name="address" id="address" cols="45" rows="5"></textarea>
+				</td>
 			</tr>
 			<tr>
 				<td>Grade :</td>
-				<td><select name="grade" id="grade" >
+				<td><select name="grade" id="grade">
 						<option value="0">Select ..</option>
-						<%
-							for (int i = 1; i < 14; i++) {
-								if (i == studentBean.getGrade()) {
-						%>
-						<option value="<%=i%>" selected="selected"><%=i%></option>
-						<%
-							} else {
-						%>
-						<option value="<%=i%>"><%=i%></option>
-						<%
-							}
-							}
-						%>
-
-
-				</select> <span class="mandatory">*</span>
-				</td>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+				</select> <span class="mandatory">*</span></td>
 			</tr>
 			<tr>
 				<td>Parent Name :</td>
 				<td><input type="text" name="parentName" id="parentName"
-					value="<jsp:getProperty name='studentBean' property='parentName'/>">
-				</td>
+					value=""></td>
 			</tr>
 			<tr>
 				<td colspan="2"><span class="mandatory">*</span> Mandatory
@@ -75,6 +69,31 @@
 				</td>
 			</tr>
 		</table>
+
 	</form>
+
+	<hr>
+	<table width="518" border="1">
+		<tr>
+			<td width="110">Name</td>
+			<td width="136">Address</td>
+			<td width="52">Grade</td>
+			<td width="163">Parent Name</td>
+		</tr>
+		<%
+			for (int i = 0; i < studentDetailBean.getStudents().size(); i++) {
+		%>
+		<tr>
+			<td><%=studentDetailBean.getStudents().get(i).getName()%></td>
+			<td><%=studentDetailBean.getStudents().get(i).getAddress()%></td>
+			<td><%=studentDetailBean.getStudents().get(i).getGrade()%></td>
+			<td><%=studentDetailBean.getStudents().get(i)
+						.getParentName()%></td>
+		</tr>
+		<%
+			}
+		%>
+	</table>
+	<p>&nbsp;</p>
 </body>
 </html>
