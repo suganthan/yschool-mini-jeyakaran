@@ -1,5 +1,9 @@
 package org.ymini.model;
 
+/**
+ * @author Jeyakaran
+ *
+ */
 public class Student {
 
 	private String name;

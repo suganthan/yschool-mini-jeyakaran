@@ -3,6 +3,10 @@ package org.ymini.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Jeyakaran
+ *
+ */
 public class StudentDetails {
 	private List<Student> students;
 

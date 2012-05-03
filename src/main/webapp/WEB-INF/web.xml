@@ -23,7 +23,7 @@
 		<servlet-name>helloWorldServlet</servlet-name>
 		<url-pattern>/hiServlet</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>addStudent</servlet-name>
 		<servlet-class>org.ymini.controller.AddStudentController</servlet-class>
@@ -33,7 +33,7 @@
 		<servlet-name>addStudent</servlet-name>
 		<url-pattern>/addStudent</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>studentDetails</servlet-name>
 		<servlet-class>org.ymini.controller.StudentDetailsController</servlet-class>
@@ -43,4 +43,19 @@
 		<servlet-name>studentDetails</servlet-name>
 		<url-pattern>/studentDetails</url-pattern>
 	</servlet-mapping>
+
+	<filter>
+		<filter-name>nameFilter</filter-name>
+		<filter-class>
+			org.ymini.filters.NameFilter
+    </filter-class>
+		<init-param>
+			<param-name>name-parameter</param-name>
+			<param-value>Name filter for Added new students.</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>nameFilter</filter-name>
+		<url-pattern>/addStudent</url-pattern>
+	</filter-mapping>
 </web-app>

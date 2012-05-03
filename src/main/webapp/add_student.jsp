@@ -24,18 +24,18 @@
 				<td colspan="2"></td>
 			</tr>
 			<tr>
-				<td width="158">Student Name :</td>
-				<td width="322"><input type="text" name="name" id="name"
+				<td width="180">Student Name </td>
+				<td width="300"><input type="text" name="name" id="name"
 					value=""> <span class="mandatory">*</span>
 				</td>
 			</tr>
 			<tr>
-				<td>Address :</td>
+				<td>Address </td>
 				<td><textarea name="address" id="address" cols="45" rows="5"></textarea>
 				</td>
 			</tr>
 			<tr>
-				<td>Grade :</td>
+				<td>Grade </td>
 				<td><select name="grade" id="grade">
 						<option value="0">Select ..</option>
 						<option value="1">1</option>
@@ -55,7 +55,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Parent Name :</td>
+				<td>Parent Name </td>
 				<td><input type="text" name="parentName" id="parentName"
 					value="">
 				</td>

@@ -8,6 +8,10 @@ import javax.servlet.http.*;
 import org.ymini.model.Student;
 import org.ymini.model.StudentDetails;
 
+/**
+ * @author Jeyakaran
+ *
+ */
 public class AddStudentController extends HttpServlet {
 
 	StudentDetails studentDetails = new StudentDetails();
